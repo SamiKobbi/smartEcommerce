@@ -1,9 +1,16 @@
 package com.smartApp.smartEcommerce.models;
 
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
+
+@Entity
 public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -11,6 +18,10 @@ public class Category {
 	
 	private String name;
 
+	public Category()
+	{
+		
+	}
 	public Category(Long id, String name) {
 		this.id = id;
 		this.name = name;

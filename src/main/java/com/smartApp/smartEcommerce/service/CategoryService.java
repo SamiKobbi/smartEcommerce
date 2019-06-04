@@ -8,16 +8,16 @@ import com.smartApp.smartEcommerce.models.Category;
 
 public interface CategoryService {
 	   /**
-     * Updates the specified product, identified by its id.
+     * Updates the specified category, identified by its id.
      *
-     * @param product   The product to update.
+     * @param category   The category to update.
      * @return          True if the update succeeded, otherwise false.
      */
 	List<Category> findAll();
     /**
-     * Saves the specified product to the database.
+     * Saves the specified categoryCategory to the database.
      *
-     * @param product   The product to save to the database.
+     * @param category   The category to save to the database.
      * @return          The saved product.
      */
 	Category save(Category category);

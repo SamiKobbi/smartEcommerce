@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.smartApp.smartEcommerce.models.Category;
+import com.smartApp.smartEcommerce.service.CategoryService;
 
 
 
@@ -21,10 +22,10 @@ import com.smartApp.smartEcommerce.models.Category;
 @RequestMapping("/category")
 public class CategoryController {
 	
-	
+	@Autowired CategoryService categoryService;
 	@GetMapping("getAll")
 	public List<Category> list() {
-		return new ArrayList<Category>();
+		return categoryService.findAll();
 	}
 	
 	@PostMapping("create")
